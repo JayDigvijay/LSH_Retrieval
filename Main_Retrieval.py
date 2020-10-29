@@ -41,9 +41,9 @@ def MinHash (x, i):
 ###############################################################################
     
 ########### QUERY INPUT #######################################################
-query_choice = input("Press '1' to enter your own DNA Sequence. Press '0' to choose a DNA sequence randomly from database.\n")
+query_choice = int(input("Press '1' to enter your own DNA Sequence. Press '0' to choose a DNA sequence randomly from database.\n"))
 
-if(query_choice == '1'):
+if(query_choice == 1):
     query = input("Enter your query as a string of DNA sequence in uppercase, e.g. 'AGCATACG...'\n")
 else:
     query = random.choice(Sequence_List)
@@ -103,7 +103,7 @@ for doc in Candidate_List:
 #print(Similar)
 ###############################################################################
 print("For the query:", query)
-print((len(Similar)-1), " sequences were retrieved in ", (time.time() - start), " seconds with similarity greater than or equal to ", t*100, "% with the query.\n ")
+print((len(Similar)), " sequence(s) retrieved in ", (time.time() - start), " seconds with similarity greater than or equal to ", t*100, "% with the query.\n ")
 display = input("Press '1' to view sequence numbers.\n")
 if(display):
     print(Similar)
