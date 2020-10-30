@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct 28 13:57:43 2020
-
-@author: Prof. S.R.Singh
+This module stores all the global parameters required in the LSH retrieval 
+process, namely: k = Shingle Length, b = Number of bands in which Signature 
+Matrix is divided, r = Rows per band, t = Threshold for similarity, n = Number 
+of Hash Functions used. 
 """
 import pickle
 

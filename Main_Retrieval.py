@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct 28 23:02:30 2020
-
-@author: Prof. S.R.Singh
+This module is responsible for interacting with the user, processing the inputs 
+fed by him, and fetching the results for the same, using the LSH based corpus 
+generated in the previous modules. 
 """
 ############# IMPORTING LIBRARIES AND PARAMETERS ##############################
 import time
