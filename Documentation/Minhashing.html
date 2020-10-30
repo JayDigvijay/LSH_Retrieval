@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Minhashing</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Minhashing</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cshrey%5Cdocuments%5Cunspoilt_projects%5Clsh_retrieval%5Cminhashing.py">d:\shrey\documents\unspoilt_projects\lsh_retrieval\minhashing.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;module&nbsp;generates&nbsp;the&nbsp;Signature&nbsp;Matrix&nbsp;from&nbsp;the&nbsp;Document&nbsp;Matrix,&nbsp;using&nbsp;a&nbsp;<br>
+suitable&nbsp;minhashing&nbsp;function.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-Signature_Generator"><strong>Signature_Generator</strong></a>()</dt><dd><tt>Generate,&nbsp;store&nbsp;and&nbsp;pickle&nbsp;signature&nbsp;matrix&nbsp;using&nbsp;Minhashing</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Doc_Matrix</strong> = {1: {'AAAAA': 1, 'AAAAT': 1, 'AAACA': 1, 'AAACC': 1, 'AAACT': 1, 'AAAGC': 1, 'AAATA': 1, 'AAATC': 1, 'AAATG': 1, 'AAATT': 1, ...}, 2: {'AAAAA': 1, 'AAAAC': 1, 'AAAAT': 1, 'AAACA': 1, 'AAACC': 1, 'AAACT': 1, 'AAAGG': 1, 'AAATA': 1, 'AAATC': 1, 'AAATG': 1, ...}, 3: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACC': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, ...}, 4: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, 'AAAGT': 1, ...}, 5: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACC': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, ...}, 6: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACC': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, ...}, 7: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACC': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, ...}, 8: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACC': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, ...}, 9: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACC': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, ...}, 10: {'AAAAG': 1, 'AAACA': 1, 'AAAGC': 1, 'AAAGG': 1, 'AAAGT': 1, 'AAATA': 1, 'AAATC': 1, 'AAATG': 1, 'AACAA': 1, 'AACAG': 1, ...}, ...}<br>
+<strong>Shingle_Dict</strong> = {'AAAAA': 1, 'AAAAC': 3, 'AAAAG': 2, 'AAAAT': 4, 'AAACA': 9, 'AAACC': 11, 'AAACG': 10, 'AAACT': 12, 'AAAGA': 5, 'AAAGC': 7, ...}<br>
+<strong>__warningregistry__</strong> = {'version': 0}<br>
+<strong>k</strong> = 5<br>
+<strong>n</strong> = 100<br>
+<strong>start</strong> = 1604075445.6492407</td></tr></table>
+</body></html>

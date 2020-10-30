@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Main_Retrieval</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Main_Retrieval</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cshrey%5Cdocuments%5Cunspoilt_projects%5Clsh_retrieval%5Cmain_retrieval.py">d:\shrey\documents\unspoilt_projects\lsh_retrieval\main_retrieval.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;module&nbsp;is&nbsp;responsible&nbsp;for&nbsp;interacting&nbsp;with&nbsp;the&nbsp;user,&nbsp;processing&nbsp;the&nbsp;inputs&nbsp;<br>
+fed&nbsp;by&nbsp;him,&nbsp;and&nbsp;fetching&nbsp;the&nbsp;results&nbsp;for&nbsp;the&nbsp;same,&nbsp;using&nbsp;the&nbsp;LSH&nbsp;based&nbsp;corpus&nbsp;<br>
+generated&nbsp;in&nbsp;the&nbsp;previous&nbsp;modules.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-Jaccard_Similarity"><strong>Jaccard_Similarity</strong></a>(sig1, sig2)</dt><dd><tt>Calculates&nbsp;Jaccard&nbsp;Similarity&nbsp;between&nbsp;two&nbsp;arrays</tt></dd></dl>
+ <dl><dt><a name="-Query_Retrieval"><strong>Query_Retrieval</strong></a>()</dt><dd><tt>Takes&nbsp;query&nbsp;input,&nbsp;processes&nbsp;input&nbsp;through&nbsp;shingling&nbsp;and&nbsp;generates&nbsp;its&nbsp;signature<br>
+Uses&nbsp;the&nbsp;generated&nbsp;signature&nbsp;to&nbsp;bucket&nbsp;query&nbsp;and&nbsp;documents<br>
+Using&nbsp;the&nbsp;buckets,&nbsp;a&nbsp;check&nbsp;for&nbsp;true&nbsp;negatives&nbsp;and&nbsp;false&nbsp;positives&nbsp;is&nbsp;performed,&nbsp;after&nbsp;which&nbsp;result&nbsp;is&nbsp;given</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Doc_Buckets</strong> = {6: [24, 28, 157, 158, 179, 183, 184, 395, 693, 694, 695, 696, 697, 698, 755, 756, 757, 761, 762, 763, ...], 7: [110, 111, 247, 248, 249, 250, 304, 305, 306, 307, 308, 341, 342, 343, 344, 357, 358, 362, 420, 421, ...], 8: [160, 214, 233, 234, 333, 388, 585, 629, 684, 769, 770, 909, 910, 911, 912, 952, 1002, 1272, 1273, 1431, ...], 9: [44, 46, 91, 92, 93, 94, 95, 115, 268, 269, 270, 271, 272, 275, 276, 277, 294, 296, 297, 300, ...], 10: [74, 76, 77, 78, 98, 100, 156, 177, 178, 221, 321, 322, 323, 459, 460, 461, 466, 489, 497, 588, ...], 11: [3, 5, 6, 7, 8, 9, 16, 105, 106, 139, 200, 201, 202, 205, 206, 255, 324, 326, 380, 381, ...], 12: [29, 30, 75, 81, 82, 84, 86, 89, 138, 167, 168, 235, 236, 325, 372, 379, 484, 495, 517, 564, ...], 13: [31, 32, 33, 37, 51, 180, 314, 315, 316, 318, 453, 465, 467, 469, 501, 520, 522, 523, 526, 547, ...], 14: [4, 24, 28, 34, 35, 90, 179, 183, 184, 537, 538, 590, 598, 647, 648, 649, 654, 702, 703, 704, ...], 15: [38, 40, 108, 117, 118, 257, 259, 260, 267, 327, 328, 329, 330, 438, 439, 442, 443, 444, 445, 446, ...], ...}<br>
+<strong>Doc_Matrix</strong> = {1: {'AAAAA': 1, 'AAAAT': 1, 'AAACA': 1, 'AAACC': 1, 'AAACT': 1, 'AAAGC': 1, 'AAATA': 1, 'AAATC': 1, 'AAATG': 1, 'AAATT': 1, ...}, 2: {'AAAAA': 1, 'AAAAC': 1, 'AAAAT': 1, 'AAACA': 1, 'AAACC': 1, 'AAACT': 1, 'AAAGG': 1, 'AAATA': 1, 'AAATC': 1, 'AAATG': 1, ...}, 3: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACC': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, ...}, 4: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, 'AAAGT': 1, ...}, 5: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACC': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, ...}, 6: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACC': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, ...}, 7: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACC': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, ...}, 8: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACC': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, ...}, 9: {'AAAAA': 1, 'AAAAC': 1, 'AAAAG': 1, 'AAACA': 1, 'AAACC': 1, 'AAACG': 1, 'AAACT': 1, 'AAAGA': 1, 'AAAGC': 1, 'AAAGG': 1, ...}, 10: {'AAAAG': 1, 'AAACA': 1, 'AAAGC': 1, 'AAAGG': 1, 'AAAGT': 1, 'AAATA': 1, 'AAATC': 1, 'AAATG': 1, 'AACAA': 1, 'AACAG': 1, ...}, ...}<br>
+<strong>Hash</strong> = [[0, 0], [1, 2], [1, 1], [5, 2], [1, 1], [2, 1], [2, 4], [3, 1], [3, 5], [3, 2], [4, 4], [3, 2], [3, 3], [4, 2], [2, 5], [1, 3], [2, 4], [2, 5], [3, 1], [2, 2], ...]<br>
+<strong>Results</strong> = {15: 'ATGTGTGGCATTTGGGCGCTGTTTGGCAGTGATGATTGCCTTTCTGTTCAGTGTCTGAGTGCTATGAAGATTGCACACAGAGGTC'}<br>
+<strong>Sequence_List</strong> = ['', 'ATGCCCCAACTAAATACTACCGTATGGCCCACCATAATTACCCCCATA...AAAATGAACGAAAATCTGTTCGCTTCATTCATTGCCCCCACAATCCTAG', 'ATGAACGAAAATCTGTTCGCTTCATTCATTGCCCCCACAATCCTAGGC...CTACGTTTTCACACTTCTAGTAAGCCTCTACCTGCACGACAACACATAA', 'ATGTGTGGCATTTGGGCGCTGTTTGGCAGTGATGATTGCCTTTCTGTT...CCCTTCTGCCCGCACGCTGACCCACTACAAGTCAGCTGTCAAAGCTTAG', 'ATGTGTGGCATTTGGGCGCTGTTTGGCAGTGATGATTGCCTTTCTGTT...AAACTGCTTTGTGTGCCAAAAGCAAAACTCTTGGTGTTTTTGTTTGTGA', 'ATGCAACAGCATTTTGAATTTGAATACCAGACCAAAGTGGATGGTGAG...CCCTTCTGCCCGCACGCTGACCCACTACAAGTCAGCTGTCAAAGCTTAG', 'ATGTGTGGCATTTGGGCGCTGTTTGGCAGTGATGATTGCCTTTCTGTT...CCCTTCTGCCCGCACGCTGACCCACTACAAGTCAGCTGTCAAAGCTTAG', 'ATGAAGATTGCACACAGAGGTCCAGATGCATTCCGTTTTGAGAATGTC...CCCTTCTGCCCGCACGCTGACCCACTACAAGTCAGCTGTCAAAGCTTAG', 'ATGCAACAGCATTTTGAATTTGAATACCAGACCAAAGTGGATGGTGAG...CCCTTCTGCCCGCACGCTGACCCACTACAAGTCAGCTGTCAAAGCTTAG', 'ATGAAGATTGCACACAGAGGTCCAGATGCATTCCGTTTTGAGAATGTC...CCCTTCTGCCCGCACGCTGACCCACTACAAGTCAGCTGTCAAAGCTTAG', 'ATGTGTGGCATTTGGGCGCTGTTTGGCAGTGATGATTGCCTTTCTGTT...TGGAAATGGTTAAATATCATCACTGTCGGGATGTACCCCTGCACGCCCT', 'ATGTGTGGCATTTGGGCGCTGTTTGGCAGTGATGATTGCCTTTCTGTT...AAAGCAATGACAGAAGATGGATTTTTGGCTGTATGTTCAGAAGCTAAAG', 'ATGTGTGGCATTTGGGCGCTGTTTGGCAGTGATGATTGCCTTTCTGTT...ATCTTTATGACAAAGGAGGAATTGAGCAAACAATTTGTATGTTGGATGG', 'ATGAAGATTGCACACAGAGGTCCAGATGCATTCCGTTTTGAGAATGTC...GTATTTGTGGCTCTGTTACAATGGTGAAATCTACAACCATAAGAAGGTG', 'ATGTGTGGCATTTGGGCGCTGTTTGGCAGTGATGATTGCCTTTCTGTTCAGTGTCTGAGTGCTATGAAGATTGCACACAGAGGTCCAGATGCATTCCG', 'ATGTGTGGCATTTGGGCGCTGTTTGGCAGTGATGATTGCCTTTCTGTTCAGTGTCTGAGTGCTATGAAGATTGCACACAGAGGTC', 'ATGTGTGGCATTTGGGCGCTGTTTGGCAGTGATGATTGCCTTTCTGTT...CCCTTCTGCCCGCACGCTGACCCACTACAAGTCAGCTGTCAAAGCTTAG', 'ATGGCGGATTCCAGCGAAGGCCCCCGCGCGGGGCCCGGGGAGGTGGCT...CCAGCAGGGTTACCCCCGCAAGTGGAGGACTGATGACGCCCCGCTCTAG', 'ATGGCGGATTCCAGCGAAGGCCCCCGCGCGGGGCCCGGGGAGGTGGCT...CCAGCAGGGTTACCCCCGCAAGTGGAGGACTGATGACGCCCCGCTCTAG', 'ATGGCGGATTCCAGCGAAGGCCCCCGCGCGGGGCCCGGGGAGGTGGCT...CCCTGGAGTGAATTCTCTCTTCATTGATGGCTCCTTCCAGCTGCTCTAG', ...]<br>
+<strong>Shingle_Dict</strong> = {'AAAAA': 1, 'AAAAC': 3, 'AAAAG': 2, 'AAAAT': 4, 'AAACA': 9, 'AAACC': 11, 'AAACG': 10, 'AAACT': 12, 'AAAGA': 5, 'AAAGC': 7, ...}<br>
+<strong>Signature_Matrix</strong> = {1: {1: 3, 2: 2, 3: 7, 4: 2, 5: 3, 6: 6, 7: 2, 8: 0, 9: 3, 10: 8, ...}, 2: {1: 1, 2: 0, 3: 1, 4: 0, 5: 1, 6: 2, 7: 1, 8: 0, 9: 2, 10: 0, ...}, 3: {1: 0, 2: 0, 3: 2, 4: 0, 5: 1, 6: 0, 7: 1, 8: 1, 9: 0, 10: 0, ...}, 4: {1: 0, 2: 0, 3: 2, 4: 0, 5: 1, 6: 0, 7: 1, 8: 1, 9: 0, 10: 0, ...}, 5: {1: 0, 2: 0, 3: 2, 4: 0, 5: 1, 6: 0, 7: 1, 8: 1, 9: 0, 10: 0, ...}, 6: {1: 0, 2: 0, 3: 2, 4: 0, 5: 1, 6: 0, 7: 1, 8: 1, 9: 0, 10: 0, ...}, 7: {1: 0, 2: 0, 3: 2, 4: 0, 5: 1, 6: 0, 7: 1, 8: 1, 9: 0, 10: 0, ...}, 8: {1: 0, 2: 0, 3: 2, 4: 0, 5: 1, 6: 0, 7: 1, 8: 1, 9: 0, 10: 0, ...}, 9: {1: 0, 2: 0, 3: 2, 4: 0, 5: 1, 6: 0, 7: 1, 8: 1, 9: 0, 10: 0, ...}, 10: {1: 0, 2: 0, 3: 2, 4: 0, 5: 1, 6: 0, 7: 1, 8: 1, 9: 2, 10: 0, ...}, ...}<br>
+<strong>Similar_Docs</strong> = [15]<br>
+<strong>__warningregistry__</strong> = {'version': 0}<br>
+<strong>display</strong> = '1'<br>
+<strong>k</strong> = 5<br>
+<strong>n</strong> = 100<br>
+<strong>q</strong> = 0<br>
+<strong>r</strong> = 25<br>
+<strong>t</strong> = 0.95</td></tr></table>
+</body></html>

@@ -17,6 +17,9 @@ Shingle_Dict = pickle_read('Shingle_Dict.pickle')
 ###############################################################################
 
 def Signature_Generator ():
+    '''
+        Generate, store and pickle signature matrix using Minhashing
+    '''
     ################# GENERATING SIGNATURES ###################################
     Signature_Matrix = {}
     for doc in Doc_Matrix:

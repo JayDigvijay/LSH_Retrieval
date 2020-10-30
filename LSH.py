@@ -13,6 +13,9 @@ from Parameters import  r, b, pickle_read, pickle_write
 Signature_Matrix = pickle_read('Signature_Matrix.pickle')
 ###############################################################################
 def Bucketing():
+    '''
+        Create buckets for the docs using the signature matrix
+    '''
     ############ BUCKETING THE SIGNATURES #####################################
     Doc_Buckets = {}
     for doc in Signature_Matrix:

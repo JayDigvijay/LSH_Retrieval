@@ -8,6 +8,13 @@ from itertools import product
 from Parameters import k, pickle_write
 
 def Shingling ():
+    '''
+        Reads data
+        Cleans the data
+        Generate Document matrix
+        Stores the shingles
+        Pickles files for ready access
+    '''
     #############GETTING SEQUENCE AND CLASS LISTS##################################
     og_data = open('human_data.txt')
     lines = og_data.readlines()

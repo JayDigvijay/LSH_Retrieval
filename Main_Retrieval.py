@@ -23,13 +23,20 @@ Hash = pickle_read('Hash.pickle')
 
 ############## DEFINING SIMILARITY AND HASHING FUNCTION #######################
 def Jaccard_Similarity(sig1, sig2):
+    '''
+        Calculates Jaccard Similarity between two arrays
+    '''
     Intersect = list(set(sig1) & set(sig2))
     Union = list(set(sig1) | set(sig2))
     return len(Intersect)/len(Union)
 
 ###############################################################################
 def Query_Retrieval():
-    
+    '''
+        Takes query input, processes input through shingling and generates its signature
+        Uses the generated signature to bucket query and documents
+        Using the buckets, a check for true negatives and false positives is performed, after which result is given
+    '''
     ########### QUERY INPUT ###################################################
     
     query = input("Enter your query as a string of DNA sequence in uppercase, e.g. 'AGCATACG...'\n")
