@@ -9,8 +9,18 @@ We can also query the documents using Main_Retrieval.py. This returns the simila
 
 ## Running the code
 ```
+sudo nano Parameters.py
+```
+Used to edit/check parameters k, r, b, etc. and the MinHash function.
+```
 python3 Shingling.py
 python3 Minhashing.py
-python3 LSH.py #to get the buckets present in data
-python3 Main_Retrieval #obtain matching documents through inputting a query
+python3 LSH.py
 ```
+Performs the LSH operations on the entire data set.
+Should be run once, or whenever the code/parameters/data are updated.
+```
+python3 Main_Retrieval 
+```
+Initiates system to take user query and return matching sequences
+
